@@ -23,15 +23,16 @@ Route::get('/posts/{id}/{book}', function ($myid,$book) {
 
 //Route::view('/show','post.show');
 
-Route::get('/show/{nbr}', function ($nbr) {
-    $posts=[
-        ['title' => 'laravel'],
-        ['title' => 'laravel']
-    ];
-    return view('post.show', ["data" => $posts]);
-});
+// Route::get('/show/{nbr}/{book}', function ($nbr,) {
+//     $posts=[
+//         1 =>['title' => 'laravel'],
+//         2 =>['title' => 'react']
+//     ];
+//     return view('post.show', ["data" => $posts]);
+// });
 
-//Route::get('/home ,HomeController@home') -> name('home');
+Route::get('/show/{id}/{book?}',[HomeController::class,'blog']) -> name('blog');
+
 
 
 Route::get('/home',[HomeController::class,'home']) -> name('home');

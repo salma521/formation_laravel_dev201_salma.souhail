@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
 
-<p>Title : {{$data[$nbr]["title"]}}</p>
+<p>Title : {{$data["title"]}}</p>
 
 @endsection
